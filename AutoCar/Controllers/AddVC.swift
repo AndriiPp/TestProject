@@ -11,6 +11,7 @@ import UIKit
 class AddVC: UIViewController {
     
     let coreDataWork = CoreDataWork.init()
+    let workWithDta = WorkWithData.init()
     
     let saveButton : UIButton = {
         let button = UIButton(type: .system)
@@ -113,6 +114,11 @@ class AddVC: UIViewController {
     
     @objc func backToTable(){
         self.dismiss(animated: true, completion: nil)
+        workWithDta.getData { (cars) in
+            for car in cars {
+                print(car)
+            }
+        }
     }
     
     func setupConstraints(){
@@ -158,7 +164,7 @@ class AddVC: UIViewController {
         releaseText.heightAnchor.constraint(equalTo: inputsContainer.heightAnchor, multiplier: 1/4).isActive = true
         
         releaseSeparator.leftAnchor.constraint(equalTo: inputsContainer.leftAnchor).isActive = true
-        releaseSeparator.topAnchor.constraint(equalTo: modelText.bottomAnchor).isActive = true
+        releaseSeparator.topAnchor.constraint(equalTo: releaseText.bottomAnchor).isActive = true
         releaseSeparator.widthAnchor.constraint(equalTo: inputsContainer.widthAnchor).isActive = true
         releaseSeparator.heightAnchor.constraint(equalToConstant: 1).isActive = true
         

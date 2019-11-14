@@ -8,7 +8,7 @@
 
 import Foundation
 
-class  workWithData {
+class  WorkWithData {
     
     let coreDataWork = CoreDataWork.init()
     let realmWork = RealmWork.init()

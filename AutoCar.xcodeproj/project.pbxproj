@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		7E0CF3B4237CA40F00B8D681 /* AddVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E0CF3B3237CA40F00B8D681 /* AddVC.swift */; };
+		7E0D0F39237CB47900640057 /* DataProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E0D0F38237CB47900640057 /* DataProvider.swift */; };
 		7E0D6000237C5CC800CED194 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E0D5FFF237C5CC800CED194 /* AppDelegate.swift */; };
 		7E0D6002237C5CC800CED194 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E0D6001237C5CC800CED194 /* SceneDelegate.swift */; };
 		7E0D6004237C5CC800CED194 /* MainTableVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E0D6003237C5CC800CED194 /* MainTableVC.swift */; };
@@ -22,13 +23,14 @@
 		7E0D6021237C606600CED194 /* UserDefaultsWork.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E0D6020237C606600CED194 /* UserDefaultsWork.swift */; };
 		7E0D6024237C616E00CED194 /* Car.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E0D6023237C616E00CED194 /* Car.swift */; };
 		7E0D6027237C6B2400CED194 /* UserCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E0D6026237C6B2400CED194 /* UserCell.swift */; };
-		7E0D602B237C6FFC00CED194 /* workWithData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E0D602A237C6FFC00CED194 /* workWithData.swift */; };
+		7E0D602B237C6FFC00CED194 /* WorkWithData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E0D602A237C6FFC00CED194 /* WorkWithData.swift */; };
 		7EE6AA5E237C9A5400C48C1A /* CarRealm.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EE6AA5D237C9A5400C48C1A /* CarRealm.swift */; };
 		8A236141165B6B502A1A3139 /* Pods_AutoCar.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F33C3C758806D0B1FBCACB59 /* Pods_AutoCar.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		7E0CF3B3237CA40F00B8D681 /* AddVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddVC.swift; sourceTree = "<group>"; };
+		7E0D0F38237CB47900640057 /* DataProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataProvider.swift; sourceTree = "<group>"; };
 		7E0D5FFC237C5CC800CED194 /* AutoCar.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AutoCar.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7E0D5FFF237C5CC800CED194 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		7E0D6001237C5CC800CED194 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -45,7 +47,7 @@
 		7E0D6020237C606600CED194 /* UserDefaultsWork.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultsWork.swift; sourceTree = "<group>"; };
 		7E0D6023237C616E00CED194 /* Car.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Car.swift; sourceTree = "<group>"; };
 		7E0D6026237C6B2400CED194 /* UserCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserCell.swift; sourceTree = "<group>"; };
-		7E0D602A237C6FFC00CED194 /* workWithData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = workWithData.swift; sourceTree = "<group>"; };
+		7E0D602A237C6FFC00CED194 /* WorkWithData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkWithData.swift; sourceTree = "<group>"; };
 		7EE6AA5D237C9A5400C48C1A /* CarRealm.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarRealm.swift; sourceTree = "<group>"; };
 		8804EB76233677CE79F8E70C /* Pods-AutoCar.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AutoCar.debug.xcconfig"; path = "Target Support Files/Pods-AutoCar/Pods-AutoCar.debug.xcconfig"; sourceTree = "<group>"; };
 		ED542283C97024DAB039DD93 /* Pods-AutoCar.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AutoCar.release.xcconfig"; path = "Target Support Files/Pods-AutoCar/Pods-AutoCar.release.xcconfig"; sourceTree = "<group>"; };
@@ -167,7 +169,8 @@
 		7E0D6029237C6FD700CED194 /* Others */ = {
 			isa = PBXGroup;
 			children = (
-				7E0D602A237C6FFC00CED194 /* workWithData.swift */,
+				7E0D602A237C6FFC00CED194 /* WorkWithData.swift */,
+				7E0D0F38237CB47900640057 /* DataProvider.swift */,
 			);
 			path = Others;
 			sourceTree = "<group>";
@@ -301,10 +304,11 @@
 				7E0D6021237C606600CED194 /* UserDefaultsWork.swift in Sources */,
 				7E0D6002237C5CC800CED194 /* SceneDelegate.swift in Sources */,
 				7E0D6019237C5E6900CED194 /* Car+CoreDataClass.swift in Sources */,
-				7E0D602B237C6FFC00CED194 /* workWithData.swift in Sources */,
+				7E0D602B237C6FFC00CED194 /* WorkWithData.swift in Sources */,
 				7E0D601A237C5E6900CED194 /* Car+CoreDataProperties.swift in Sources */,
 				7E0D600A237C5CC800CED194 /* AutoCar.xcdatamodeld in Sources */,
 				7EE6AA5E237C9A5400C48C1A /* CarRealm.swift in Sources */,
+				7E0D0F39237CB47900640057 /* DataProvider.swift in Sources */,
 				7E0D601F237C605600CED194 /* RealmWork.swift in Sources */,
 				7E0D6027237C6B2400CED194 /* UserCell.swift in Sources */,
 				7E0CF3B4237CA40F00B8D681 /* AddVC.swift in Sources */,
