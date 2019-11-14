@@ -14,7 +14,8 @@ protocol DataProviderProtocol : class {
 }
 
 class DataProvider : NSObject {
-    public var cars : [CarModel] = []
+    public var cars = [CarModel]()
+    
     public lazy var workData = WorkWithData.init()
     public weak var delegate: DataProviderProtocol?
     private var carCount: Int {

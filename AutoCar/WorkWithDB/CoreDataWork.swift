@@ -10,7 +10,15 @@ import UIKit
 import CoreData
 
 class CoreDataWork {
-    lazy var context =  (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
+   
+    
+    public var context: NSManagedObjectContext = {
+            var appDelegate = UIApplication.shared.delegate as! AppDelegate
+            return  appDelegate.persistentContainer.viewContext
+       
+    }()
+
+   
     
     func getCarsFromCoreData(completion : @escaping (_ cars : [Car]) -> ()){
         let fetchRequest : NSFetchRequest<Car> = Car.fetchRequest()

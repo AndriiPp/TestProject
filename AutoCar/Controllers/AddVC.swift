@@ -11,7 +11,7 @@ import UIKit
 class AddVC: UIViewController {
     
     let coreDataWork = CoreDataWork.init()
-    let workWithDta = WorkWithData.init()
+    
     
     let saveButton : UIButton = {
         let button = UIButton(type: .system)
@@ -110,15 +110,12 @@ class AddVC: UIViewController {
         let carModel = CarModel.init(firm: firmText.text!, model: modelText.text!, yearOfRelease: releaseText.text!, bodyCar: bodyTypeText.text!)
         coreDataWork.setCarsToCoreData(car: carModel)
         
+        
     }
     
     @objc func backToTable(){
         self.dismiss(animated: true, completion: nil)
-        workWithDta.getData { (cars) in
-            for car in cars {
-                print(car)
-            }
-        }
+    
     }
     
     func setupConstraints(){

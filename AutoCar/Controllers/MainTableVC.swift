@@ -30,15 +30,23 @@ class MainTableVC: UIViewController {
            return bt
        }()
     override func viewWillAppear(_ animated: Bool) {
-        workData.setCarsToCoreData(car: mersedesModel)
-        loadAll()
+        
+      loadAll()
     }
     override func viewDidLoad() {
         super.viewDidLoad()
         setupTableViewAndButton()
+        setupConstraints()
     }
     override func viewDidDisappear(_ animated: Bool) {
         
+    }
+    func setupConstraints(){
+        self.view.addSubview(button)
+        button.rightAnchor.constraint(equalTo: view.rightAnchor, constant: -10).isActive = true
+        button.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: -10).isActive = true
+        button.widthAnchor.constraint(equalToConstant: 30).isActive = true
+        button.heightAnchor.constraint(equalToConstant: 30).isActive = true
     }
     
     func loadAll(){
@@ -56,11 +64,9 @@ class MainTableVC: UIViewController {
     
     func setupTableViewAndButton(){
         self.view.addSubview(tableView)
-        self.view.addSubview(button)
         
         self.tableView.dataSource = provider
         self.tableView.frame = CGRect.init(x: 0, y: 0, width: self.view.frame.size.width, height: self.view.frame.size.height)
-        self.button.frame = CGRect.init(x: self.view.center.x, y: self.view.center.x, width: 30, height: 30)
     }
     @objc func addNewCar(){
         let addVc = AddVC()
